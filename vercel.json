@@ -1,0 +1,16 @@
+{
+    "rewrites": [
+      {
+        "source": "/",
+        "destination": "/wow.html"
+      },
+     
+      {
+        "source": "/sp3",
+        "destination": "/index.html"
+      }
+      
+      
+    ]
+  }
+  

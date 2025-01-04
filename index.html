@@ -57,11 +57,11 @@
         Discover The 6-Second Purple Peel Exploit That Melts Away Subborn Fat
       </h1>
       <a
-        href="https://mitolyn.com/science/?affiliate=ctop2&extclid=null&tid=null&vtid=null"
+        id="dynamicUrl"
         class="button-9 w-button"
         ><strong class="bold-text-3">TAP HERE TO WATCH THE VIDEO</strong></a
       ><a
-        href="https://mitolyn.com/science/?affiliate=ctop2&extclid=null&tid=null&vtid=null"
+        id="dynamicUrl4"
         class="w-inline-block"
         ><img
           width="600"
@@ -164,7 +164,7 @@
         <em>everything</em>.
       </p>
       <a 
-      href="https://mitolyn.com/science/?affiliate=ctop2&extclid=null&tid=null&vtid=null" 
+      id="dynamicUrl2"
       target="_blank" 
       rel="noopener noreferrer"
     >
@@ -1994,5 +1994,50 @@
         </div>
       </div>
     </div>
+    <script>
+    function getQueryParam(url, param) {
+      try {
+          const urlObj = new URL(url);
+          const params = new URLSearchParams(urlObj.search);
+          return params.get(param);
+      } catch (error) {
+          console.error('Invalid URL:', error);
+          return null;
+      }
+  }
+  document.addEventListener("DOMContentLoaded", () => {
+      const url = window.location.href;
+      const paramName = "vid";
+  
+      console.log(`URL: ${url}, Parameter: ${paramName}`);
+  
+      const clickid = getQueryParam(url, paramName);
+  
+  // List of element IDs to update
+  const elementIds = [
+      "dynamicUrl",
+      "dynamicUrl2",
+      "dynamicUrl4",
+  ];
+
+  
+  
+  const redirectUrl = `https://mitolyn.com/science/?affiliate=ctop2&extclid=${clickid}&tid=${clickid}&vtid=${clickid}`;
+  
+  // Update href for each element
+  elementIds.forEach((id) => {
+      const element = document.getElementById(id);
+      if (element) {
+          element.setAttribute("href", redirectUrl);
+          console.log(`Updated href for #${id}:`, redirectUrl);
+      } else {
+          console.warn(`Element with ID "${id}" not found.`);
+      }
+  });
+  
+  console.log(`Value of 'clickid':`, clickid);
+  
+  });
+  </script>
   </body>
 </html>

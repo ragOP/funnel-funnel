@@ -8,6 +8,10 @@
       {
         "source": "/sp3",
         "destination": "/main.html"
+      },
+      {
+        "source": "/sp1",
+        "destination": "/second.html"
       }
       
       

@@ -12,6 +12,10 @@
       {
         "source": "/sp1",
         "destination": "/second.html"
+      },
+      {
+        "source": "/sp2",
+        "destination": "./ss/index.html"
       }
       
       

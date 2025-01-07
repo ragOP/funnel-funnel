@@ -15,7 +15,7 @@
       },
       {
         "source": "/sp2",
-        "destination": "./ss/index.html"
+        "destination": "/ss/index.html"
       }
       
       
